@@ -3,7 +3,7 @@ javascript:(()=>{
         ['http://localhost:8000','https://www.easyuni.com', true],
         ['https://www.google.com.my/search?q=', 'https://duckduckgo.com/?q=', false],
         ['https://open.spotify.com', 'https://play.spotify.com', false],
-        ['https://dontstarve.wikia.com/wiki', 'https://dontstarve.gamepedia.com', false],
+        ['https://en.wikipedia.org/wiki', 'https://www.wikiwand.com/en', false],
         ['https://www.dotabuff.com/matches','https://www.opendota.com/matches',false],
     ];
     var url = location.toString();
