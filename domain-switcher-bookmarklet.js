@@ -1,7 +1,7 @@
 javascript:(_=>{
     var sets = [
         [['http://localhost:8000', 'http://staging.easyuni.com', 'https://www.easyuni.com'], true],
-        [['https://www.google.com.my/search?q=', 'https://duckduckgo.com/?q='], false],
+        [['https://www.google.com/search?q=', 'https://duckduckgo.com/?q='], false],
         [['https://en.wikipedia.org/wiki', 'https://www.wikiwand.com/en'], false],
         [['https://www.dotabuff.com/matches', 'https://www.opendota.com/matches'], false],
     ];
