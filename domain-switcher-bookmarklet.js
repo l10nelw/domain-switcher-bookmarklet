@@ -1,21 +1,21 @@
 javascript:(_=>{
     
     const SETS = [
-        [['http://localhost:8000', 'http://staging.easyuni.com', 'https://www.easyuni.com'], true],
-        [['https://www.google.com/search?q=', 'https://duckduckgo.com/?q='], false],
+        // [ array_url_heads_to_match, bool_open_in_new_tab ],
+        [['https://www.google.com/search?q=', 'https://duckduckgo.com/?q=', 'https://www.bing.com/search?q='], false],
         [['https://en.wikipedia.org/wiki', 'https://www.wikiwand.com/en'], false],
         [['https://www.dotabuff.com/matches', 'https://www.opendota.com/matches'], false],
     ];
     
     var url = location.toString(),
-        newwin = false,
+        newtab = false,
         match = '',
         dest = [];
     
     (_=>{
         for (let set of SETS) {
-            let heads = set[0];
-            newwin = set[1];
+            let heads  = set[0],
+                newtab = set[1];
             for (let head of heads) {
                 if (url.startsWith(head)) {
                     match = head;
@@ -36,6 +36,6 @@ javascript:(_=>{
     }
     
     url = url.replace(match, dest);
-    newwin ? void(open(url)) : location.href = url;
+    newtab ? void(open(url)) : location.href = url;
     
 })()
